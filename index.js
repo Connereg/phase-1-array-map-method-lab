@@ -12,5 +12,18 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+    const arrOfWords = tutorials.map(sentences => {
+        const tokens = sentences.split(" ");
+        const capTokens = tokens.map(token => token.charAt(0).toUpperCase() + token.slice(1))
+        return capTokens.join(" ")}
+    )
+    return arrOfWords;
 }
+/*var str = "Hello world"
+function getStr(str) {
+  return str.split('')
+  .map(item => item)
+  .join('')
+}
+
+console.log(getStr(str)) */
